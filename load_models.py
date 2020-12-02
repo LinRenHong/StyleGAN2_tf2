@@ -2,11 +2,13 @@
 
 import tensorflow as tf
 
-from stylegan2_ref.generator import Generator
-from stylegan2_ref.discriminator import Discriminator
 
-
-def load_generator(g_params=None, is_g_clone=False, ckpt_dir=None):
+def load_generator(g_params=None, is_g_clone=False, ckpt_dir=None, custom_cuda=True):
+    if custom_cuda:
+        pass
+        # from stylegan2.generator import Generator
+    else:
+        from stylegan2_ref.generator import Generator
 
     if g_params is None:
         g_params = {
@@ -37,7 +39,12 @@ def load_generator(g_params=None, is_g_clone=False, ckpt_dir=None):
     return generator
 
 
-def load_discriminator(d_params=None, ckpt_dir=None):
+def load_discriminator(d_params=None, ckpt_dir=None, custom_cuda=True):
+    if custom_cuda:
+        pass
+        # from stylegan2.discriminator import Discriminator
+    else:
+        from stylegan2_ref.discriminator import Discriminator
 
     if d_params is None:
         d_params = {
