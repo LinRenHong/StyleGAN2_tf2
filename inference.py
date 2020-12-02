@@ -44,12 +44,12 @@ def main():
     allow_memory_growth()
 
     checkpoints = [
-        {
-            'res': 1024,
-            'ckpt_dir': './official-converted/cuda',
-            'use_custom_cuda': True,
-            'out_fn': None,
-        },
+        # {
+        #     'res': 1024,
+        #     'ckpt_dir': './official-converted/cuda',
+        #     'use_custom_cuda': True,
+        #     'out_fn': None,
+        # },
 
         {
             'res': 1024,
