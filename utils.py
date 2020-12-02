@@ -1,3 +1,5 @@
+
+
 def str_to_bool(value):
     if isinstance(value, bool):
         return value

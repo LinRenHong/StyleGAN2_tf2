@@ -1,3 +1,5 @@
+
+
 import os
 import time
 import argparse
@@ -8,7 +10,7 @@ from utils import str_to_bool
 from tf_utils import check_tf_version, allow_memory_growth, split_gpu_for_testing
 from load_models import load_generator, load_discriminator
 from dataset_ffhq import get_ffhq_dataset
-from stylegan2.losses import d_logistic, d_logistic_r1_reg, g_logistic_non_saturating, g_logistic_ns_pathreg
+from losses import d_logistic, d_logistic_r1_reg, g_logistic_non_saturating, g_logistic_ns_pathreg
 
 
 def initiate_models(g_params, d_params, use_custom_cuda):
